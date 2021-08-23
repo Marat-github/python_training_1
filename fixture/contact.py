@@ -1,31 +1,12 @@
-from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
 
-class AppContact:
-    def __init__(self):
-        self.wd = webdriver.Firefox()
-        self.wd.implicitly_wait(30)
-
-    def open_home_page(self):
-        wd = self.wd
-        # open home page
-        wd.get("http://localhost/addressbook/")
-
-    def login(self, username, password):
-        wd = self.wd
-        self.open_home_page()
-        # login
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
-        wd.find_element_by_xpath("//input[@value='Login']").click()
+class ContactHelper:
+    def __init__(self, app):
+        self.app = app
 
     def fill_new_contact(self, contact):
-        wd = self.wd
+        wd = self.app.wd
         # fill new contact
         wd.find_element_by_link_text("add new").click()
         wd.find_element_by_name("firstname").click()
@@ -103,14 +84,6 @@ class AppContact:
         self.return_home_page()
 
     def return_home_page(self):
-        wd = self.wd
+        wd = self.app.wd
         # return to main page
         wd.find_element_by_link_text("home page").click()
-
-    def logout(self):
-        wd = self.wd
-        # logout
-        wd.find_element_by_link_text("Logout").click()
-
-    def destroy(self):
-        self.wd.quit()
