@@ -9,7 +9,7 @@ def test_add_contact(app):
                               company="fdge", address="ebebebt", home_phone="4532532", mobile_phone="5435435435",
                               work_phone="234324", fax="12333", email="bteby56@mail.ru", email2="bteby56@mail.ru",
                               email3="bteby56@mail.ru", home_page="bteby56@mail.ru", bday="10", bmonth="November",
-                              byear="1999", aday="12", amonth="December", ayear="2018", contacts_group="new_group_1",
+                              byear="1999", aday="12", amonth="December", ayear="2018", contacts_group="[none]",
                               address2="greg3g43", phone2="32g4", notes="vbfdbr"))
     app.session.logout()
 
