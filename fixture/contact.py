@@ -89,7 +89,6 @@ class ContactHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         wd.find_element_by_link_text("home").click()
-        self.return_home_page()
 
     def return_home_page(self):
         wd = self.app.wd
