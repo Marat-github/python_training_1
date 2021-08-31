@@ -90,6 +90,15 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         wd.find_element_by_link_text("home").click()
 
+    def modify_first_contact(self, contact):
+        wd = self.app.wd
+        wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr[3]/td[8]/a').click()
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contact.first_name)
+        wd.find_element_by_name("update").click()
+        self.return_home_page()
+
     def return_home_page(self):
         wd = self.app.wd
         # return to main page
