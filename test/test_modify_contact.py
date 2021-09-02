@@ -2,9 +2,25 @@
 from model.contact import Contact
 
 
-def test_modify_first_contact(app):
-    app.contact.modify_first_contact(Contact(first_name="OLEEEEEEEG", middle_name="IGOR", last_name="KOLYA", nick_name="poison",
-                                             title="", company="", address="", home_phone="", mobile_phone="",
-                                             work_phone="", fax="", email="", email2="", email3="", home_page="",
-                                             bday="-", bmonth="-", byear="", aday="-", amonth="-", ayear="",
-                                             contacts_group="[none]", address2="", phone2="", notes=""))
+def test_modify_first_contact_fname(app):
+    if app.contact.count() == 0:
+        app.contact.create_new_contact(Contact(nick_name="TEST"))
+    app.contact.modify_first_contact(Contact(first_name="OLEEEEEEEG"))
+
+
+def test_modify_first_contact_mname(app):
+    if app.contact.count() == 0:
+        app.contact.create_new_contact(Contact(nick_name="TEST"))
+    app.contact.modify_first_contact(Contact(middle_name="IVANOV"))
+
+
+def test_modify_first_contact_lname(app):
+    if app.contact.count() == 0:
+        app.contact.create_new_contact(Contact(nick_name="TEST"))
+    app.contact.modify_first_contact(Contact(last_name="IVANOV"))
+
+
+def test_modify_first_contact_bday(app):
+    if app.contact.count() == 0:
+        app.contact.create_new_contact(Contact(nick_name="TEST"))
+    app.contact.modify_first_contact(Contact(bday="10"))
