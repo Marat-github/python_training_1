@@ -54,19 +54,26 @@ class ContactHelper:
         self.type("phone2", contact.phone2)
         self.type("notes", contact.notes)
 
-    def test_delete_first_contact(self):
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         wd.find_element_by_link_text("home").click()
         self.contact_cache = None
 
-    def modify_first_contact(self, contact):
+    def modify_first_contact(self):
+        self.modify_contact_by_index(0)
+
+    def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-        wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr[2]/td[8]/a').click()
+        wd.find_elements_by_link_text('edit.php?id=')[index].click()
+        # wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr['+str(index)+']/td[8]/a').click()
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
         self.return_home_page()
