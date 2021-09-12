@@ -72,8 +72,9 @@ class ContactHelper:
     def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-        wd.find_elements_by_link_text('edit.php?id=')[index].click()
-        # wd.find_element_by_xpath('//*[@id="maintable"]/tbody/tr['+str(index)+']/td[8]/a').click()
+        wd.find_elements_by_css_selector('[href^="edit.php?id="]')[index].click()
+        # wd.find_elements_by_css_selector('#maintable > tbody:nth-child(1) > tr > td:nth-child(8) > a:nth-child(1)')\
+        # [index].click()
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
         self.return_home_page()
