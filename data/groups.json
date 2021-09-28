@@ -1,68 +1,44 @@
 [
   {
+    "py/object": "model.group.Group",
     "name": "",
     "header": "",
     "footer": "",
     "id": null
   },
   {
-    "name": "nameEICZ",
-    "header": "headerqkWcbz4a14oPrx",
-    "footer": "footerOkp42hcn1A",
+    "py/object": "model.group.Group",
+    "name": "namem",
+    "header": "headerS9AthH9ex1naueQwavp",
+    "footer": "footerZucDLSWXJ",
     "id": null
   },
   {
-    "name": "name3GjaC",
-    "header": "headerJY7OnKknm2jpje",
-    "footer": "footer5",
+    "py/object": "model.group.Group",
+    "name": "name2G",
+    "header": "headerpwDgstlc2kB5vuJRs",
+    "footer": "footerq1OTYJFvxt1Fu",
     "id": null
   },
   {
-    "name": "namey1eEex",
-    "header": "headerd4Y",
-    "footer": "footerNzInE43jp",
-    "id": null
-  },
-  {
-    "name": "namegXL",
-    "header": "headerGoC3",
-    "footer": "footer4UpBekOwmYijrPb",
-    "id": null
-  },
-  {
-    "name": "nameN76JVn",
-    "header": "headerfnh6fi1kHJrL3tW",
-    "footer": "footerAh",
-    "id": null
-  },
-  {
-    "name": "namekbGW",
-    "header": "header",
-    "footer": "footerZd0tbHSs01wfHCdZkxV",
-    "id": null
-  },
-  {
-    "name": "nameDJTBR",
-    "header": "headerH168GpscLNr",
-    "footer": "footerFqSNsVSsEnWgx6DNlx1",
-    "id": null
-  },
-  {
-    "name": "namekDPR062Vz",
-    "header": "header4k2tJyT7yIVCjDh",
-    "footer": "footerIuTGhBbjuKnRxgb",
-    "id": null
-  },
-  {
-    "name": "name1Q11tP",
-    "header": "headerH2ufApVjzn",
-    "footer": "footercm",
-    "id": null
-  },
-  {
+    "py/object": "model.group.Group",
     "name": "name",
-    "header": "headerTixNgFfElZ0",
-    "footer": "footermdxGaHio4BFsEWZ",
+    "header": "headerlov1W",
+    "footer": "footerZBWnPYAZQwcqLqDLO",
+    "id": null
+  },
+  {
+    "py/object": "model.group.Group",
+    "name": "nameIQYFJ5",
+    "header": "headerSV",
+    "footer": "footer2OxiSuLPWGikirlNWQw",
+    "id": null
+  },
+  {
+    "py/object": "model.group.Group",
+    "name": "namer",
+    "header": "headerhpkb4ZVl7IXuzEa",
+    "footer": "footerxRcSFJTBvipNlifiO9n",
     "id": null
   }
 ]
